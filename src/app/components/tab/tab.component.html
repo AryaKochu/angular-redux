@@ -1,0 +1,25 @@
+<!-- <div>
+    
+<mat-tab-group>
+  <mat-tab label="One" 
+           ng-href="/" 
+           routerLink="/counter" 
+           routerLinkActive="active">
+  </mat-tab>
+    <mat-tab label="Two" 
+             routerLink="/filters"
+             routerLinkActive="active">
+    </mat-tab>
+  </mat-tab-group>
+</div> -->
+
+
+<nav mat-tab-nav-bar>
+    <a mat-tab-link
+       *ngFor="let link of navLinks"
+       [routerLink]="link.path"
+       routerLinkActive #rla="routerLinkActive"
+       [active]="rla.isActive">
+      {{link.label}}
+    </a>
+  </nav>

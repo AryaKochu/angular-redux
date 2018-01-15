@@ -1,0 +1,13 @@
+<div>
+  <mat-button-toggle-group multiple class="button-row" #group="matButtonToggleGroup">
+      <mat-button-toggle
+         *ngFor="let x of filterArray; let i = index" 
+         [value]="x.id" 
+         (click)="clicked(x)">{{x.category}}</mat-button-toggle>
+    </mat-button-toggle-group>
+    <br />
+    <a routerLink="/"
+    routerLinkActive="active">
+    Back
+  </a>
+</div>
